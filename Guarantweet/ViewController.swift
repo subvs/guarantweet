@@ -8,6 +8,10 @@
 
 import UIKit
 
+var amountText = ""
+var dueDateText = ""
+var tweetText = ""
+
 class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     
@@ -15,6 +19,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
     @IBOutlet weak var dueDatePicker: UIDatePicker!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var tweetLabel: UILabel!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,18 +69,20 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
     }
     
     @IBAction func tweetButtonTapped(_ sender: Any) {
-        let registryTableViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistryTableViewController") as! RegistryTableViewController
-        self.navigationController?.pushViewController(registryTableViewController, animated: true)
+        let tweetPopupViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TweetPopupViewController") as! TweetPopupViewController
+        self.navigationController?.pushViewController(tweetPopupViewController, animated: true)
     }
     
     fileprivate func updateTweetText() {
-        let amount = amountTextField.text ?? ""
+        amountText = amountTextField.text ?? ""
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy"
-        let dateStr = dateFormatter.string(from: dueDatePicker.date)
+        dueDateText = dateFormatter.string(from: dueDatePicker.date)
         
-        tweetLabel.text = "I #guarantweet \(promiseTextView!.text!) by \(dateStr). I pledge \(amount) to Unicef if I fail.\nhttps://guarantweet.com/e89743"
+        tweetText = "I #guarantweet \(promiseTextView!.text!) by \(dueDateText). I pledge \(amountText) to Unicef if I fail.\nhttps://guarantweet.com/e89743"
+        
+        tweetLabel.text = tweetText
     }
 }
 

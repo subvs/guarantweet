@@ -13,6 +13,7 @@
 		C9ED244C1F9C904400DD5C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9ED244B1F9C904400DD5C5F /* Assets.xcassets */; };
 		C9ED244F1F9C904400DD5C5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9ED244D1F9C904400DD5C5F /* LaunchScreen.storyboard */; };
 		C9F252D21F9CB65900FF4F6E /* RegistryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F252D11F9CB65900FF4F6E /* RegistryTableViewController.swift */; };
+		C9F252D41F9CE63700FF4F6E /* TweetPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F252D31F9CE63700FF4F6E /* TweetPopupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C9ED244E1F9C904400DD5C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9ED24501F9C904400DD5C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9F252D11F9CB65900FF4F6E /* RegistryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistryTableViewController.swift; sourceTree = "<group>"; };
+		C9F252D31F9CE63700FF4F6E /* TweetPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetPopupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				C9ED24441F9C904400DD5C5F /* AppDelegate.swift */,
 				C9ED24461F9C904400DD5C5F /* ViewController.swift */,
+				C9F252D31F9CE63700FF4F6E /* TweetPopupViewController.swift */,
 				C9F252D11F9CB65900FF4F6E /* RegistryTableViewController.swift */,
 				C9ED24481F9C904400DD5C5F /* Main.storyboard */,
 				C9ED244B1F9C904400DD5C5F /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			files = (
 				C9ED24471F9C904400DD5C5F /* ViewController.swift in Sources */,
 				C9ED24451F9C904400DD5C5F /* AppDelegate.swift in Sources */,
+				C9F252D41F9CE63700FF4F6E /* TweetPopupViewController.swift in Sources */,
 				C9F252D21F9CB65900FF4F6E /* RegistryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
