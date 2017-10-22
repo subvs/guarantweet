@@ -18,7 +18,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        self.title = "Guarantweet"
         
         promiseTextView.delegate = self
         promiseTextView.autocapitalizationType = .none
@@ -62,7 +63,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
     }
     
     @IBAction func tweetButtonTapped(_ sender: Any) {
-        
+        let registryTableViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistryTableViewController") as! RegistryTableViewController
+        self.navigationController?.pushViewController(registryTableViewController, animated: true)
     }
     
     fileprivate func updateTweetText() {
@@ -72,7 +74,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         dateFormatter.dateFormat = "MM-dd-yyyy"
         let dateStr = dateFormatter.string(from: dueDatePicker.date)
         
-        tweetLabel.text = "I #Guarantweet \(promiseTextView!.text!) by \(dateStr). I pledge \(amount) to Unicef if I feil."
+        tweetLabel.text = "I #guarantweet \(promiseTextView!.text!) by \(dateStr). I pledge \(amount) to Unicef if I fail.\nhttps://guarantweet.com/e89743"
     }
 }
 
