@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         
         amountTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
         
-        promiseTextView.text = "[enter your promise here]"
+        promiseTextView.text = "to..."
         amountTextField.text = "$1,000.00"
 
         
