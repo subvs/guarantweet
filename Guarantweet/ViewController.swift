@@ -22,19 +22,17 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         
         promiseTextView.delegate = self
         promiseTextView.autocapitalizationType = .none
-        promiseTextView.layer.borderWidth = 1
-        promiseTextView.layer.borderColor = UIColor.black.cgColor
+        //promiseTextView.layer.borderWidth = 1
+        //promiseTextView.layer.borderColor = UIColor.black.cgColor
         
-        //promiseTextView.addTarget(self, action: #selector(textViewDidChange(_:)), for: UIControlEvents.editingChanged)
         amountTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
         
-        
-        promiseTextView.text = "[Promise]"
+        promiseTextView.text = "[enter your promise here]"
         amountTextField.text = "$1,000.00"
 
         
-        tweetLabel.layer.borderWidth = 1
-        tweetLabel.layer.borderColor = UIColor.black.cgColor
+        //tweetLabel.layer.borderWidth = 1
+        //tweetLabel.layer.borderColor = UIColor.black.cgColor
         
         
         updateTweetText()
