@@ -60,10 +60,10 @@ class RegistryTableViewController: UITableViewController {
             switch indexPath.row {
             case 0:
                 cell.tweetLabel?.text = "I #guarantweet I'll build a moat around California to keep the Arizonans out by 10/31/2017. If I fail I pledge $1,500 to Puerto Rico."
-                cell.deetLabel?.text = "5/12/2017. Pending..."
+                cell.deetLabel?.text = "10/12/2017. Pending..."
             case 1:
                 cell.tweetLabel?.text = "I #guarantweet something else by 10/31/2017. If I fail I pledge $1,500 to Puerto Rico."
-                cell.deetLabel?.text = "5/12/2017. ❌ Promise Broken."
+                cell.deetLabel?.text = "10/10/2017. ❌ Promise Broken."
             default:
                 break
             }
@@ -71,16 +71,16 @@ class RegistryTableViewController: UITableViewController {
             switch indexPath.row {
             case 0:
                 cell.tweetLabel?.text = "I #guarantweet I'll build a moat around California to keep the Arizonans out by 10/31/2017. If I fail I pledge $1,500 to Puerto Rico."
-                cell.deetLabel?.text = "5/12/2017. ✅ Promise Kept!"
+                cell.deetLabel?.text = "9/27/2017. ✅ Promise Kept!"
             case 1:
                 cell.tweetLabel?.text = "I #guarantweet I'll build a moat around California to keep the Arizonans out by 10/31/2017. If I fail I pledge $1,500 to Puerto Rico."
-                cell.deetLabel?.text = "5/12/2017. ❌ Promise Broken."
+                cell.deetLabel?.text = "9/24/2017. ❌ Promise Broken."
             case 2:
                 cell.tweetLabel?.text = "I #guarantweet I'll build a moat around California to keep the Arizonans out by 10/31/2017. If I fail I pledge $1,500 to Puerto Rico."
-                cell.deetLabel?.text = "5/12/2017. ❌ Promise Broken."
+                cell.deetLabel?.text = "9/9/2017. ❌ Promise Broken."
             case 3:
                 cell.tweetLabel?.text = "I #guarantweet I'll build a moat around California to keep the Arizonans out by 10/31/2017. If I fail I pledge $1,500 to Puerto Rico."
-                cell.deetLabel?.text = "5/12/2017. ✅ Promise Kept!"
+                cell.deetLabel?.text = "9/2/2017. ✅ Promise Kept!"
             default:
                 break
             }
@@ -92,7 +92,8 @@ class RegistryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let newResultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewResultViewController") as! NewResultViewController
+        self.navigationController?.pushViewController(newResultViewController, animated: true)
     }
     
 

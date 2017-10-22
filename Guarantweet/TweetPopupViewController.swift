@@ -20,8 +20,7 @@ class TweetPopupViewController: UIViewController {
         
         tweetLabel.text = tweetText
         
-        nowHoldingTextView.text = "We're now holding your \(amountText).\n\nYou'll get it back on \(dueDateText) if you keep your promise.  Now get to work!"
- 
+        nowHoldingTextView.text = "We're now holding your \(amountText) in escrow.\n\nYou'll get it back on \(dueDateText)... if you keep your promise. Now get to work!"
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
